@@ -1,6 +1,7 @@
 ## WidgetsLikeGoolePlay
 ![ic_launcher](https://user-images.githubusercontent.com/11782272/37563574-e69073de-2aa9-11e8-8207-8270e92d4f14.png)
-Inspired by Google play store Widgets, project made on MVVM pattern by using Android binding and recycler views.
+       
+  Inspired by Google play store Widgets, project made on MVVM pattern by using Android binding and recycler views.
   That shows items HORIZONTALLY nad VERTICALLY.  
   
 ### Carousal Widget.
@@ -19,10 +20,10 @@ Using carousal Widget.
 
  Using Infinite List Widget.
 
-     <com.salman.zach.widgetlikegoogleplay.widgets.widgets.PlayListingWidget
-        android:id="@+id/listWidget"
+       <com.salman.zach.widgetlikegoogleplay.playWidgets.widgets.PlayCarousalWidget
+        android:id="@+id/carousalWidget"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content" />
         
         
  Then set itemlist model to widget.   
@@ -31,10 +32,13 @@ Using carousal Widget.
          
 Set widget title,description and Banner Image.
 
+         // Background Color will Generate by Banner Image 
+        carousalWidget.setBannerImage(R.drawable.js_banner);   
+        // Set Tital 
         carousalWidget.setTitle("Super Hero Movies !");
+        // Set Description 
         carousalWidget.setDescription("Search Latest Super Hero Movies");
-        // Background Color will Generate by Banner Image 
-        carousalWidget.setBackgroundImage(R.drawable.js_banner);
+        
         
         
 License
