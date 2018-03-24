@@ -26,7 +26,7 @@ Using carousal Widget.
         android:layout_height="match_parent"/>
         
         
- Then set a View model witch implements ViewModel Interface from Base to widget.   
+ Then set a View model which implements ViewModel Interface from Base to widget.   
         
        carousalWidget.buildWidget(viewModel);   
          
