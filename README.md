@@ -9,10 +9,10 @@
 
 Using carousal Widget.
 
-      <com.salman.zach.widgetlikegoogleplay.widgets.widgets.PlayCarousalWidget
+      <com.salman.zach.widgetlikegoogleplay.playWidgets.widgets.PlayCarousalWidget
         android:id="@+id/carousalWidget"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>        
+        android:layout_height="wrap_content" />        
         
         
 ### Infinite List Widget.
@@ -20,15 +20,15 @@ Using carousal Widget.
 
  Using Infinite List Widget.
 
-       <com.salman.zach.widgetlikegoogleplay.playWidgets.widgets.PlayCarousalWidget
-        android:id="@+id/carousalWidget"
+        <com.salman.zach.widgetlikegoogleplay.playWidgets.widgets.PlayListingWidget
+        android:id="@+id/listWidget"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"/>
         
         
- Then set itemlist model to widget.   
-
-         carousalWidget.setItem(models);    
+ Then set a View model witch implements ViewModel Interface from Base to widget.   
+        
+       carousalWidget.buildWidget(viewModel);   
          
 Set widget title,description and Banner Image.
 
