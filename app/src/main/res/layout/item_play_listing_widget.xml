@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.salman.zach.widgetlikegoogleplay.playWidgets.viewModels.ListItemViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:onClick="@{model::itemClicked}"
+        android:padding="15dp">
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="@dimen/item_width"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:image="@{model}" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/item_image"
+            android:maxLines="2"
+            android:text="@{model.title}"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/item_image"
+            android:maxLines="1"
+            android:text="This is Description Demo"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/item_image"
+            android:maxLines="1"
+            android:text="FREE"
+            android:textColor="#e94c21"
+            android:textSize="14sp" />
+
+        <TextView android:id="@+id/rating"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+                  android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+                  android:layout_toRightOf="@+id/item_image"
+                  android:text="@{String.valueOf(model.rating)}"
+            android:textColor="#fff"
+            android:textSize="12sp"
+                  tools:text="4.2"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/rating"
+            app:srcCompat="@drawable/ic_star" />
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/ic_more"/>
+    </RelativeLayout>
+
+</layout>
